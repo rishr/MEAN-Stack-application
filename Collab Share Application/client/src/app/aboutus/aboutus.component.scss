@@ -1,0 +1,216 @@
+
+// CSS AND SCSS FILE STARTS HERE FOR ABOUT ME 
+
+
+
+
+// HEADER CONTENT FOR ABOUT US 
+.headercontent
+{
+font-family: 'Times New Roman', Times, serif;
+text-align: center;
+border-right: 20px; 
+font-size: 22px;
+margin-left: 10%;
+margin-right: 10%;
+
+
+}
+
+
+
+
+
+// USING PSEUDO ELEMENT BEFORE AND AFTER INJECTING IN THE DOM BEFORE HTML
+// // * IS USED SO THAT IT CAN BE USED IN ALL THE BROWSWERS
+
+
+
+body {
+    background: #FFF;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
+    font-size: 18px;
+  }
+  *, :before, :after {
+      box-sizing: border-box;
+      
+  }
+
+
+// EACH PERSON CLASS AND PERSON BADGE 
+  .person {
+    width: 600px;
+    padding: 70px 0 0 230px;
+    min-height: 200px;
+    margin: auto;
+    position: relative;
+  
+    
+  }
+
+
+  .person-badge {
+    width: 200px;
+    height: 280px;
+    border-radius: 0 0 100px 100px;
+    overflow: hidden;
+    transform: rotate(0deg); /* To force its own layer */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+
+  // USING PSEUDO ELEMENTS FOR THE COLOR EFFECTS
+
+  .person-badge:before,
+  .person-badge:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    border-radius: 50%;
+    z-index:-1;
+    width: 200px;
+    height: 200px;
+    background: #DDD;
+    background: linear-gradient(to bottom, #EEE 0%,#CCC 100%);
+    transition:500ms;
+    
+    
+    
+  }
+
+  // TOP TURNS TO RED(F88) FOR THE  PERSON BADGE
+  .person-badge:after {
+    background: linear-gradient(to top, #F88 0%,#EEE 100%);
+      
+    opacity: 0;
+    
+  }
+
+  // TOP TURNS TO BLUE(5AB) FOR THE  PERSON BADGE
+  .person:nth-child(2) .person-badge:after {
+    background: linear-gradient(to top, #5AB 0%,#EEE 100%);  
+  }
+
+  // TOP TURNS TO YELLOW FOR THE PERSON BADGE
+  .person:nth-child(3) .person-badge:after {
+    background: linear-gradient(to top, #FC0 0%,#EEE 100%);
+  }
+
+  .person-badge:hover:after {
+    opacity: 1;
+  }
+  
+
+  // PERSON BADGE IMAGE 
+  .person-badge img {
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 500ms;
+    
+  }
+  .person-badge img.peculiar {
+    opacity: 0;
+    transform: translateY(80px)
+  }
+  
+  .person-badge:hover img.normal {
+    opacity: 0;
+    transform: translateY(80px)
+    
+
+  
+  }
+  .person-badge:hover img.peculiar {opacity: 1;
+    transform: translateY(0)}
+  
+  .person h3 {
+    margin: 0;
+    font-weight: 200;
+    font-size: 28px;
+    
+   
+  }
+  
+  strong {color: #888;margin:-5px 0 5px 0;display:block;font-size:.8em;}
+
+  .header{
+text-align: center;
+font-size: 30px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+
+ 
+// IMPORTED GOOGLE API FONTS FROM GOOGLE
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+// * IS USED SO THAT IT CAN BE USED IN ALL THE BROWSWERS.SETTING DEFAULT MARGIN AND PADDING TO ZERO.
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+// HTML BODY AND FONT FAMILY
+html, body {
+  font-family: Raleway, sans-serif;  
+  background-color: #fff;
+}
+
+// FOOTER WIDTH AND HEIGHT.DISPLAY AS AN INLINE BLOCK
+footer {
+  width: 100%;
+  display: inline-block;
+  margin:  0;
+  height: 70px;
+  background-color: #999;
+  margin-top: 110px;
+
+  .copyright {
+     width: 50%;
+     float: left;
+    
+    }
+    p {
+      padding-left: 10%;
+      color: white;
+      font-size: 0.7em;
+      line-height: 70px;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      
+      }
+    }
+  
+  .social {
+      width: 50%;
+      float: right;
+    
+    }
+     a {
+      float: left;
+      line-height: 70px;
+      text-decoration: none;
+      color: white;
+      text-align: center;
+      font-weight: bold; 
+      
+    }
+  
+
+// GIT DETAILS
+.git {
+  background-color: black;
+  font-size: 1.2em;
+  width: 20%;
+
+}
+
+
+

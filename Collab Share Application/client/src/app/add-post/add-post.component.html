@@ -1,0 +1,19 @@
+<app-user-profile-nav></app-user-profile-nav>
+
+<span class="post">
+    <form #addPostForm="ngForm" (ngSubmit)="addPost(addPostForm)">
+        <label for="exampleInputEmail1"><strong>Title</strong></label><br>
+        <div class="post_title">
+            <input ngModel #postTitle="ngModel" name="postTitle" type="text" placeholder="Enter title">
+        </div>
+        <br>
+        <label for="exampleInputPassword1"><strong>Lecture Notes</strong></label><br>
+        <div class = "post_description">
+            <textarea ngModel #postDescription name="postDescription" placeholder="Description"rows="25" cols="100"></textarea><br>
+            <button type="submit" id="submit">Add Post</button><i class="submit"></i> 
+        </div>
+
+      </form>
+  
+    </span>
+

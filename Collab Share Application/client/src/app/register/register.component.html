@@ -1,0 +1,27 @@
+
+<!-- For registerForm -->
+
+<form #registerForm="ngForm" (ngSubmit)="registerUser(registerForm)" id="registrationForm" class="registerbackground">
+  <div class="container">
+    <h2>REGISTER HERE</h2>
+    <div>
+      <input ngModel #emailAddress="ngModel" type="text" autocomplete="off" placeholder="EmailAddress" id="emailAddress"
+        name="emailAddress">
+        <!-- Email address -->
+    </div>
+    <div>
+      <!-- PASSWORD -->
+      <input ngModel #password="ngModel" type="password" autocomplete="off" placeholder="Password" id="password" name="password">
+    </div>
+    <div>
+      <input ngModel #cpassword="ngModel" type="password" autocomplete="off" placeholder="Confirm Password" name="cpassword"
+        id="cpassword">
+    </div>
+    <div>
+      <!-- SUBMIT BUTTON -->
+      <button type="submit" id="submit">REGISTER</button>
+    </div>
+
+  </div>
+</form>
+<app-popup (closeEvent)="hideErrors($event)" [errorText]="errorText" *ngIf="errorPopup"></app-popup>

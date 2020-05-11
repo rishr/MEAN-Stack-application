@@ -1,0 +1,16 @@
+.#*
+*~
+*#
+#*
+*.log
+*.tmp
+**/npm-cache
+client/node_modules
+server/node_modules
+server/dist/docs/
+client/dist/docs/
+client/package.lock.json
+server/package-lock.json
+/dist
+server/nodemon.json
+.env

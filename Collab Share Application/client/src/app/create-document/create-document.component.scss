@@ -1,0 +1,11 @@
+a{
+    color: white;
+    text-decoration:none;
+    font-weight:bold;
+    // background-color: lightgrey;
+    margin-top:10px;
+    &:hover{
+        // background-color: darkgray;
+        color:black;
+    }
+}

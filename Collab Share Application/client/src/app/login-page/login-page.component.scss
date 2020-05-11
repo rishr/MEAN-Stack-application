@@ -1,0 +1,50 @@
+
+// form style
+form {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20%;
+    // border-bottom: 20em;
+    
+}
+// container in DIV style
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 20px;
+    background: #eee;
+    border-radius: 20px;
+    background:rgb(136, 165, 165);
+}
+// input box style
+input#username, input#password, input#emailAddress{
+    outline: 0;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 5px;
+    min-width: 300px;
+}
+// submit button style
+button#submit {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+// background color
+$bgcolors:#7cd4d4, #e2df45, #e8afbb, #8bc3e5;
+.loginbackground {
+    @for $i from 0 through 3 {
+        &:nth-child(#{$i + 1}) {
+            background: nth($bgcolors, $i + 1) url(http://www.graphicartsunit.com/images/noise.png);
+        }
+    }
+}

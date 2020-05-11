@@ -1,0 +1,10 @@
+<div id="errorPopup" *ngIf="errorPopup">
+    <div class="modal">
+        <div class="modal-content">
+            <p>
+                {{ errorText }}
+            </p>
+            <button (click)="errorAccept()">Ok</button>
+        </div>
+    </div>
+</div>

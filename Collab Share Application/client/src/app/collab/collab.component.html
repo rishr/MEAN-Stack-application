@@ -1,0 +1,36 @@
+<div id="container" class="container">
+  <div>
+    <div *ngIf="showRestrictButton"><button (click)="restrictSession()">Restrict This Session</button></div>
+  </div>
+  <div>
+    <div *ngIf="showInviteBox">
+      <input id="emails" ngModel #emails="ngModel" ng-list type="text" size="80"
+        placeholder="Comma separated multiple email values" name="emails" />
+      <button (click)="sendEmail(emails.value)">Send Invites</button>
+    </div>
+  </div>
+  <div class="mainColabclass">
+    <div class="editBox" id="editBox" #editableBox [innerHTML]="collabMessage" (keyup)="collab($event)"
+      contenteditable="true"></div>
+    <div *ngIf="showSaveButton">
+      <button (click)="saveData(editableBox.innerHTML);">Save session</button>
+    </div>
+  </div>
+  <div class="chatDiv">
+    <div class="displayMsg">
+      <div *ngFor="let message of messages">
+        <strong>{{ message.handle }}</strong>: {{ message.message }}
+      </div>
+    </div>
+    <input ngModel #messageText="ngModel" type="text" class="message" id="message" placeholder="Message"
+      name="message" />
+    <button (click)="sendChatMessage(messageText.value)" id="send">Send</button>
+  </div>
+</div>
+<div>
+  <div class="posts">
+    <div class="postblock" *ngFor="let post of posts">
+      <h2>{{ post.postTitle }}</h2>{{ post.postDescription }}
+    </div>
+  </div>
+</div>

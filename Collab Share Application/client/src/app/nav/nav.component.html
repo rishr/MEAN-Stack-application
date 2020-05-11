@@ -1,0 +1,18 @@
+<!-- NAv BAR header starts here -->
+<!-- unordered list has been used  -->
+
+<header>
+  <div class="container">
+    <a routerLink="/" class="logo">{{ appTitle }}</a>
+    <nav>
+      <ul>
+        <li><a routerLink="/homepage">Home</a></li>
+        <li><a routerLink="/aboutus">About us</a></li>
+        <li *ngIf="showLogin"><a routerLink="loginpage">Login</a></li>
+        <li *ngIf="showRegister"><a routerLink="register">Register</a></li>
+        <li ><a (click)="goToUserProfile()">My Profile</a></li>
+        <li *ngIf="emailAvailable"><a routerLink="loginpage"(click)="logout()">Log Out</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

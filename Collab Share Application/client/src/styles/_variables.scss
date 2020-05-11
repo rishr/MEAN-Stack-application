@@ -1,0 +1,47 @@
+// Required Variables
+$page_width: 95%;
+$black: #000000;
+$silver: #C0C0C0;
+$darksilver: #A9A9A9;
+$white: #ffff;
+$red: #FF0000;
+$green: #61B329;
+$fb: #3B5998;
+$insta: #7D34B2;
+$silver_border: 1px solid $silver;
+$serif: "Trebuchet MS",
+Arial,
+Helvetica,
+sans-serif;
+$merri : "Merriweather";
+$centered_margin: 0 auto;
+
+// Mixin for fonts
+@mixin font-weight($weight) {
+  $weights: (thin: 100,
+    extra-light: 200,
+    ultra-light: 200,
+    light: 300,
+    normal: 400,
+    book: 400,
+    regular: 400,
+    medium: 500,
+    semi-bold: 600,
+    demi-bold: 600,
+    bold: 700,
+    extra-bold: 800,
+    ultra-bold: 900,
+    heavy: 900,
+    black: 900,
+    ultra: 900,
+    ultra-black: 900,
+    extra-ultra: 900);
+
+  $output: $weight;
+
+  @if map-has-key($weights, $weight) {
+    $output: map-get($weights, $weight);
+  }
+
+  font-weight: $output;
+}

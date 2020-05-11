@@ -1,0 +1,17 @@
+img {
+  margin: 0 auto;
+  display: table-cell;
+}
+
+.notfound {
+  display: table;
+  margin: 0 auto;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+.display404 {
+  img {
+    width: 50%;
+  }
+}

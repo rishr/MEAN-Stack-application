@@ -1,0 +1,56 @@
+
+
+
+
+// FORM LAYOUT USING FLEX
+form {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+// REGISTER CONTAINER USING FLEX ,BACKGROUND
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 20px;
+    background: #eee;
+    border-radius: 20px;
+    background:rgb(136, 165, 165);
+}
+
+input#emailAddress, input#password, input#cpassword{
+    outline: 0;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 5px;
+    min-width: 300px;
+}
+// SUBMIT BUTTON 
+button#submit {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+// USING 4 DIFFERENT COLOR WHERE 0 IS THE FIRST CHILD AND SO ON.N TH SELECTOR MATCHES EVERY COMPONENT.
+$bgcolors:#7cd4d4, #e2df45, #e8afbb, #8bc3e5;
+
+.registerbackground{
+
+    @for $i from 0 through 3 {
+        &:nth-child(#{$i + 1}) {
+          background: nth($bgcolors, $i + 1) url(http://www.graphicartsunit.com/images/noise.png);
+        }
+      }
+     
+      
+}

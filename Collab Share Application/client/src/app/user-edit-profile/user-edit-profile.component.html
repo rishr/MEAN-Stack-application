@@ -1,0 +1,22 @@
+<app-user-profile-nav></app-user-profile-nav>
+
+<form #updateUsersForm="ngForm" (ngSubmit)="onSubmit(updateUsersForm)" name="AddUserForm" class="userMainClass">
+
+    <h3>Email Address:</h3>
+    <input [(ngModel)]="emailAddress" type="text" required="true" name="emailAddress" /><span></span>
+    <h3>First Name:</h3>
+    <input [(ngModel)]="firstName" type="text" required="true" placeholder="First Name" name="firstName" />
+    <h3>Last Name:</h3>
+    <input [(ngModel)]="lastName" type="text" required="true" placeholder="Last Name" name="lastName" />
+    <h3>Contact Number:</h3>
+    <input [(ngModel)]="contactNumber" type="text" placeholder="Contact Number" required="true" name="contactNumber" />
+    <h3>Add profession:</h3>
+    <input [(ngModel)]="profession" type="text" placeholder="Profession"required="true" name="profession" />
+    <input [(ngModel)]="id" name="id" type="hidden" />
+    <!-- <h3>Change Password:  <img src="/assets/images/download.png" id="editImage" (click)="editPassword(opClickEdit)"/></h3>
+    <input *ngIf="editPassDiv"[(ngModel)]="newpassword" type="password" placeholder="password" required="true" name="newpassword" /> -->
+    <div>
+        <input type="submit" value="Update Profile" />
+    </div>
+</form>
+<app-popup (closeEvent)="hideErrors($event)" [errorText]="errorText" *ngIf="errorPopup"></app-popup>

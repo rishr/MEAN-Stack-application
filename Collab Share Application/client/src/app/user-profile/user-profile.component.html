@@ -1,0 +1,27 @@
+
+
+
+<!-- <nav>
+  <a (click)="openEditProfile()">EDIT YOUR PROFILE</a>&nbsp;
+  <a (click)="openDownloadDocuments()">DOWNLOAD YOUR DOCUMENT</a>&nbsp;
+  <a (click)="openHistory()">VIEW YOUR HISTORY</a>
+  <a id="back" (click)="goBackToMainPage()">GO BACK</a>
+</nav> -->
+<app-user-profile-nav (refreshEvent)="refreshNav($event)" ></app-user-profile-nav>
+
+
+<!-- <div class="imageClass" >
+    <ngx-avatar name={{emailAddress}} size="100"></ngx-avatar>
+</div> -->
+<div class="userMainClass" class="userMainClass">
+    <h2>Email Address:</h2><div class="card"id="labelDiv"><span>{{ emailAddress }}</span></div>
+    <h2 *ngIf="firstName">First Name:</h2><div id="labelDiv"class="card"*ngIf="firstName"><span *ngIf="firstName">{{ firstName }}</span></div>
+    <h2 *ngIf="lastName">Last Name:</h2><div id="labelDiv"class="card" *ngIf="lastName"><span *ngIf="lastName">{{ lastName }}</span></div>
+    <h2 *ngIf="contactNumber">Contact Number:</h2><div id="labelDiv" class="card"*ngIf="contactNumber"><span *ngIf="contactNumber">{{ contactNumber }}</span></div>
+    
+</div>
+<!-- 
+<router-outlet></router-outlet> -->
+
+
+

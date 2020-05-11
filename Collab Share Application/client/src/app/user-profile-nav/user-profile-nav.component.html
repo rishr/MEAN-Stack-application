@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="imageClass">
+    <ngx-avatar name={{loggedEmail}} size="200"></ngx-avatar>
+  </div>
+  <ul>
+    <li><app-create-document (createDoc)="generateCode()"></app-create-document></li>
+    <li><a (click)="openEditProfile()">EDIT PROFILE</a></li>
+    <li><a (click)="openDownloadDocuments()">DOWNLOAD YOUR DOCUMENT</a></li>
+    <li><a (click)="addPost()">ADD NOTES</a></li>
+    <li><a (click)="goBackToMainPage()">GO BACK</a></li>
+  </ul>
+</div>
